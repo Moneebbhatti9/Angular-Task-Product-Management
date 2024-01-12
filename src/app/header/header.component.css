@@ -1,0 +1,348 @@
+.header-nav {
+  width: calc(100% - 5rem);
+  margin-left: 3rem;
+  z-index: 1;
+  transition: all .5s ease;
+  background-color: #ffffff;
+  padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+  position: fixed;
+  top: 0;
+  border: 1px 0 0 0 solid rgb(131, 134, 139);
+
+
+  .header-nav-content {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .nav-content-left {
+
+      .search-container {
+        position: relative;
+
+        .normal-search {
+
+          .search {
+            border: none;
+            height: 3rem;
+            padding-left: 2.5rem;
+            padding-right: 1.5rem;
+            background-color: #eef3ff;
+            box-shadow: none;
+            border-radius: 1.5rem;
+            outline: 0;
+          }
+
+
+          .search-icon {
+            position: absolute;
+            font-size: 1rem;
+            line-height: 2rem;
+            left: 1rem;
+            top: .5rem;
+            color: #74788d;
+          }
+        }
+
+        .search-menu-btn {
+          font-size: 18px;
+          height: 42px;
+          width: 42px;
+          cursor: pointer;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          outline: 0;
+        }
+
+        .search-menu-btn:hover,
+        .search-menu-btn:focus {
+          .search-icon {
+            color: #646ae5;
+          }
+        }
+      }
+    }
+
+    .header-nav-right {
+      display: flex;
+      align-items: center;
+
+
+      .header-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.25rem;
+
+
+        .header-menu-item {
+          margin-right: 10px;
+
+          .header-menu-item-btn {
+            font-size: 18px;
+            height: 42px;
+            width: 42px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            outline: 0;
+            color: #495057;
+            background-color: #eef3ff;
+
+            .flag {
+              height: 17px;
+              border-radius: 3px;
+              margin-top: 3px;
+            }
+          }
+
+          .header-menu-item-btn:hover,
+          .header-menu-item-btn:focus {
+            background: #eef3ff;
+
+            .menu-icon {
+              color: #646ae5;
+            }
+          }
+        }
+      }
+
+      .header-nav-user-avatar-container {
+        margin-left: 20px;
+
+        .header-user-avatar {
+          position: relative;
+
+          .user-avatar {
+            margin-bottom: -4px;
+            width: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(35 35 35 /15%);
+            cursor: pointer;
+          }
+        }
+
+        .circle-indicator {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          top: -2px;
+          right: -3px;
+          background: #699dfa;
+
+          &.pulse {
+            animation: pluse-animation 1.2s infinite;
+          }
+
+
+        }
+
+      }
+    }
+  }
+}
+
+.head-trimmed {
+  width: calc(100% - 16rem);
+  margin-left: 16rem;
+}
+
+.head-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+}
+
+.overlay {
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 0.3rem;
+}
+
+.overlay-fall {
+  animation: fall 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.overlay-search {
+  padding: 1rem;
+  display: flex;
+  border: .5px solid rgba(155 159 167 / 0.6);
+  border-radius: 10px;
+  position: relative;
+
+  .search {
+    border: none;
+    height: 3rem;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+    background-color: #eef3ff;
+    box-shadow: none;
+    border-radius: 1.5rem;
+    outline: 0;
+  }
+
+  .search-btn {
+    font-size: 18px;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    outline: 0;
+  }
+
+}
+
+.overlay-language {
+  padding: 0.5rem 0;
+  border: .5px solid rgba(155 159 167 / 0.6);
+  border-radius: 10px;
+
+  ul {
+    list-style: none;
+    width: 10rem;
+
+    li {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+      font-weight: 400;
+      color: #495057;
+      cursor: pointer;
+
+      img {
+        margin-right: 0.8rem;
+        height: 12px;
+      }
+    }
+
+    li:hover {
+      color: #699dfa;
+    }
+  }
+}
+
+
+.overlay-notification {
+  ul {
+    list-style: none;
+    width: 350px;
+    border: .5px solid rgba(155 159 167 / 0.6);
+    border-radius: 10px;
+
+
+    li {
+      padding: 1rem;
+
+      &.notify-head-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .notify-head {
+          font-size: 15px;
+          color: #495057;
+
+        }
+
+        .view-all-link {
+          font-size: 80%;
+          color: #699dfa;
+          cursor: pointer;
+        }
+      }
+
+      &.notify-message-container {
+        cursor: pointer;
+        display: flex;
+
+        i {
+          margin-right: 15px;
+          font-size: 20px;
+          color: #699dfa;
+          width: 25px;
+          text-align: center;
+        }
+
+        .notify-content {
+          margin-bottom: 0.3rem;
+          font-size: 15px;
+          color: #495057;
+        }
+
+        &:hover {
+          color: #699dfa;
+        }
+
+        .notify-description {
+          font-size: 12px;
+          color: #74788d;
+        }
+
+      }
+    }
+  }
+}
+
+
+.overlay-user {
+
+
+  ul {
+    padding: 0.5rem 0;
+    list-style: none;
+    width: 10rem;
+    border: .5px solid rgba(155 159 167 / 0.6);
+    border-radius: 10px;
+
+    li {
+      padding: 0.4rem 1.5rem;
+      font-size: 14px;
+      font-weight: 400;
+      color: #495057;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
+
+      .icon {
+        margin-right: 0.6rem;
+      }
+    }
+
+    li:hover {
+      color: #699dfa;
+    }
+  }
+}
+
+
+@keyframes pluse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(26, 104, 206, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px rgba(17, 64, 125, 0);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .search-container {
+    display: none;
+  }
+}
