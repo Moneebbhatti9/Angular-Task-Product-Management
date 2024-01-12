@@ -173,6 +173,8 @@
   border: .5px solid rgba(155 159 167 / 0.6);
   border-radius: 10px;
   position: relative;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
 
   .search {
     border: none;
@@ -201,6 +203,7 @@
   padding: 0.5rem 0;
   border: .5px solid rgba(155 159 167 / 0.6);
   border-radius: 10px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 
   ul {
     list-style: none;
@@ -227,11 +230,15 @@
 
 
 .overlay-notification {
+  border: .5px solid rgba(155 159 167 / 0.6);
+  border-radius: 10px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
+
   ul {
     list-style: none;
     width: 350px;
-    border: .5px solid rgba(155 159 167 / 0.6);
-    border-radius: 10px;
+
 
 
     li {
@@ -290,13 +297,17 @@
 
 .overlay-user {
 
+  border: .5px solid rgba(155 159 167 / 0.6);
+  border-radius: 10px;
+
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
 
   ul {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0rem;
     list-style: none;
     width: 10rem;
-    border: .5px solid rgba(155 159 167 / 0.6);
-    border-radius: 10px;
+
 
     li {
       padding: 0.4rem 1.5rem;
