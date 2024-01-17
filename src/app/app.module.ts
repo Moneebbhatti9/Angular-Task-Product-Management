@@ -12,8 +12,10 @@ import { HeaderComponent } from './header/header.component';
 
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
-
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     SublevelMenuComponent,
     HeaderComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
