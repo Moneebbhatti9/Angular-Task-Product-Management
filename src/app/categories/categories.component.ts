@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
+import { MainService } from '../services/main.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-categories',
@@ -6,13 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent {
-  categoryName: string = '';
-  categoryStatus: string = 'active';
+  constructor(private MainService: MainService) {}
 
-  categoryStatusOptions = ['active', 'not active'];
+  categoryForm: FormGroup = new FormGroup({
+    categoryName: new FormControl('', [Validators.required]),
+    categoryStatus: new FormControl('', [Validators.required]),
+  });
 
-  submitForm() {
-    console.log('Category Name:', this.categoryName);
-    console.log('Category Status:', this.categoryStatus);
+  onSubmitCategoryForm() {
+    const { categoryName, categoryStatus } = this.categoryForm.value;
+
+    this.MainService.addCategory({
+      _id: Math.random() + 1,
+      categoryName,
+      categoryStatus: categoryStatus === 'Active',
+    });
+
+    this.categoryForm.reset();
   }
 }

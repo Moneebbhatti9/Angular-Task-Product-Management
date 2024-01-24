@@ -1,5 +1,110 @@
 .component-heading {
+  background-color: #fff;
+  height: 20px;
+  padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  border-radius: 10px;
+}
+
+.main-content-container {
+  margin: 1rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+}
+
+.addProduct {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 4% 5%;
+  background: #32c98d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.addProduct:hover {
+  background: #2c6ae5;
+}
+
+.normal-search {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  .search {
+    border: 1px solid rgb(207, 207, 207);
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 5px;
+    outline: 0;
+    width: 100%;
+  }
+
+
+  .search-icon {
+    position: absolute;
+    font-size: 1rem;
+    line-height: 2rem;
+    right: 1rem;
+    top: .2rem;
+    color: #74788d;
+  }
+}
+
+
+
+.pTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid rgb(197, 197, 197);
+}
+
+.tHead th {
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  height: 3rem;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.table-row {
+  text-align: center;
+  height: 5rem;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.table-row td,
+.table-row th {
+  padding: 12px;
+}
+
+.table-row th:first-child,
+.table-row td:first-child {
+  text-align: center;
+}
+
+.dropdown-menu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 1440px) {
+  .table-container {
+    overflow-x: auto;
+  }
 }

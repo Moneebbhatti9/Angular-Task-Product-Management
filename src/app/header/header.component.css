@@ -262,7 +262,7 @@
         }
       }
 
-      &.notify-message-container {
+      &.notify-message-containers {
         cursor: pointer;
         display: flex;
 

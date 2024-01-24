@@ -12,9 +12,13 @@ import { HeaderComponent } from './header/header.component';
 
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CategoryModalComponent } from './modal/category-modal/category-modal.component';
+import { VendorModalComponent } from './modal/vendor-modal/vendor-modal.component';
+import { ProductModalComponent } from './modal/product-modal/product-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
+    CategoryModalComponent,
+    VendorModalComponent,
+    ProductModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,8 @@ import { RegisterComponent } from './register/register.component';
     OverlayModule,
     CdkMenuModule,
     FormsModule,
+    NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

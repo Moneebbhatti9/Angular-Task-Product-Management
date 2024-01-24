@@ -1,5 +1,8 @@
 .component-heading {
+  background-color: #fff;
+  height: 20px;
+  padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  border-radius: 10px;
 }

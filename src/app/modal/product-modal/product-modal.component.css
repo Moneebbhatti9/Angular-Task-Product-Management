@@ -11,7 +11,6 @@
   margin: 1rem auto;
   background-color: #fff;
   border-radius: 10px;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
   padding: 2rem 3rem;
 }
 
@@ -93,14 +92,15 @@
     margin-bottom: 0.7rem;
   }
 
-
 }
 
-.alignButton {
-  text-align: end;
+.button1 {
+  background: #2c6ae5;
+  color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.error-message {
-  margin-top: 10px;
-  color: red;
+.button1:hover {
+  background: #32c98d;
+  color: #fff;
 }
