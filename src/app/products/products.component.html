@@ -17,6 +17,15 @@
                       id="pName1"
                       class="input-style"
                     />
+                    <div
+                      *ngIf="
+                        productForm.get('productName')?.invalid &&
+                        productForm.get('productName')?.touched
+                      "
+                      class="text-danger"
+                    >
+                      Product Name is required
+                    </div>
                   </div>
                 </div>
               </div>
@@ -26,11 +35,20 @@
                   <div class="input-feild-div">
                     <input
                       type="number"
-                      name="productName"
+                      name="productPrice"
                       formControlName="productPrice"
                       id="pName2"
                       class="input-style"
                     />
+                    <div
+                      *ngIf="
+                        productForm.get('productPrice')?.invalid &&
+                        productForm.get('productPrice')?.touched
+                      "
+                      class="text-danger"
+                    >
+                      Product Price is required
+                    </div>
                   </div>
                 </div>
               </div>
@@ -48,6 +66,15 @@
                         {{ c.categoryName }}
                       </option>
                     </select>
+                    <div
+                      *ngIf="
+                        productForm.get('selectCategory')?.invalid &&
+                        productForm.get('selectCategory')?.touched
+                      "
+                      class="text-danger"
+                    >
+                      Product Category is required
+                    </div>
                   </div>
                 </div>
               </div>
@@ -69,6 +96,15 @@
                         {{ vendor.firstName }} {{ vendor.lastName }}
                       </option>
                     </select>
+                    <div
+                      *ngIf="
+                        productForm.get('selectCategory')?.invalid &&
+                        productForm.get('selectCategory')?.touched
+                      "
+                      class="text-danger"
+                    >
+                      Product Vendor is required
+                    </div>
                   </div>
                 </div>
               </div>
@@ -85,6 +121,15 @@
                       class="text-area-style"
                     >
                     </textarea>
+                    <div
+                      *ngIf="
+                        productForm.get('productDescription')?.invalid &&
+                        productForm.get('productDescription')?.touched
+                      "
+                      class="text-danger"
+                    >
+                      Product Description is required
+                    </div>
                   </div>
                 </div>
               </div>
@@ -101,10 +146,21 @@
                 class="form-control"
                 type="file"
                 id="formFile"
+                formControlName="productImage"
                 (change)="onImageChange($event)"
               />
             </div>
           </div>
+          <div
+            *ngIf="
+              productForm.get('formFile')?.invalid &&
+              productForm.get('formFile')?.touched
+            "
+            class="text-danger"
+          >
+            Product Image is required
+          </div>
+
           <div>
             <button type="submit" class="btn custombutton">Add Product</button>
           </div>

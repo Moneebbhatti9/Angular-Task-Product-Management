@@ -47,22 +47,22 @@ export class ProductsComponent implements OnInit {
   }
 
   onSubmitAddProduct() {
-    if (this.productForm.valid) {
-      const newProduct: Product = {
-        _id: 0,
-        productName: this.productForm.value.productName,
-        productPrice: this.productForm.value.productPrice,
-        categoryId: this.productForm.value.selectCategory,
-        vendorId: this.productForm.value.selectVendor,
-        productDescription: this.productForm.value.productDescription,
-        productImage: this.productForm.value.productImage,
-      };
-
-      this.mainService.addProduct(newProduct);
-      console.log('Added product', newProduct);
-      this.productForm.reset();
-    } else {
-      alert('Form is invalid');
+    if (this.productForm.invalid) {
+      this.productForm.markAllAsTouched();
+      return;
     }
+    const newProduct: Product = {
+      _id: 0,
+      productName: this.productForm.value.productName,
+      productPrice: this.productForm.value.productPrice,
+      categoryId: this.productForm.value.selectCategory,
+      vendorId: this.productForm.value.selectVendor,
+      productDescription: this.productForm.value.productDescription,
+      productImage: this.productForm.value.productImage,
+    };
+
+    this.mainService.addProduct(newProduct);
+    console.log('Added product', newProduct);
+    this.productForm.reset();
   }
 }

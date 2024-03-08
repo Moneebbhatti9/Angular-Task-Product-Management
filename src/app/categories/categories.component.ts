@@ -28,7 +28,7 @@ export class CategoriesComponent implements OnInit {
 
   onSubmitCategoryForm() {
     if (this.categoryForm.invalid) {
-      alert('Please Fill All Fields');
+      this.categoryForm.markAllAsTouched();
       return;
     }
 

@@ -16,12 +16,12 @@ export class VendorsComponent {
     vendorCountry: new FormControl('', Validators.required),
     vendorCity: new FormControl('', Validators.required),
     vendorEmail: new FormControl('', [Validators.required, Validators.email]),
-    contactNumber: new FormControl(0, Validators.required),
+    contactNumber: new FormControl(null, Validators.required),
   });
 
   onVendorFormSubmit = () => {
     if (this.vendorForm.invalid) {
-      alert('Please Fill All Fields');
+      this.vendorForm.markAllAsTouched();
       return;
     }
     const {
