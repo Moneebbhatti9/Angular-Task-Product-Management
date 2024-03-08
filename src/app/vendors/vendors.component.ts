@@ -20,6 +20,10 @@ export class VendorsComponent {
   });
 
   onVendorFormSubmit = () => {
+    if (this.vendorForm.invalid) {
+      alert('Please Fill All Fields');
+      return;
+    }
     const {
       vendorEmail,
       vendorFirstName,

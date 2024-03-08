@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Vendor } from '../VendorInterface';
-import { Subscription } from 'rxjs';
 import { MainService } from 'src/app/services/main.service';
 import { VendorModalComponent } from 'src/app/modal/vendor-modal/vendor-modal.component';
 import { Router } from '@angular/router';
@@ -47,6 +46,16 @@ export class VendorlistComponent implements OnInit {
           this.vendors[index] = updatedVendor;
         }
       }
+    );
+  }
+
+  onSearch(event: any): void {
+    console.log('category search', event);
+    const query = (event.target as HTMLInputElement).value;
+    this.vendors = this.vendors.filter(
+      (vendor) =>
+        vendor.firstName.toLowerCase().includes(query.toLowerCase()) ||
+        vendor.lastName.toLowerCase().includes(query.toLowerCase())
     );
   }
 }

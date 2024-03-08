@@ -12,6 +12,7 @@ import { ProductModalComponent } from 'src/app/modal/product-modal/product-modal
 })
 export class ProductlistComponent implements OnInit {
   Products: Product[] = [];
+  originalProducts: Product[] = [];
   noMatch: boolean = false;
 
   constructor(
@@ -21,7 +22,8 @@ export class ProductlistComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.Products = this.mainService.getProducts();
+    this.Products = this.originalProducts = this.mainService.getProducts();
+
     console.log(this.Products);
   }
 
@@ -44,6 +46,10 @@ export class ProductlistComponent implements OnInit {
     const cheapProducts = this.mainService.getCheapProducts(maxPrice);
 
     this.Products = cheapProducts;
+  }
+
+  clearFilters(): void {
+    this.Products = this.originalProducts;
   }
 
   editProduct(product: Product) {

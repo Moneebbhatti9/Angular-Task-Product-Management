@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class CategorylistComponent implements OnInit {
   categories: Category[] = [];
+  filteredCategories: Category[] = [];
   selectedCategory: Category = {} as Category;
 
   constructor(
@@ -22,8 +23,9 @@ export class CategorylistComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.categories = this.mainService.getCategories();
-    console.log('CAtegories', this.categories);
+    this.categories = this.filteredCategories =
+      this.mainService.getCategories();
+    console.log('CAtegories', this.filteredCategories);
   }
 
   onAddCategory() {
@@ -53,6 +55,14 @@ export class CategorylistComponent implements OnInit {
           this.categories[index] = updatedCategory;
         }
       }
+    );
+  }
+
+  onSearch(event: any): void {
+    console.log('category search', event);
+    const query = (event.target as HTMLInputElement).value;
+    this.categories = this.categories.filter((category) =>
+      category.categoryName.toLowerCase().includes(query.toLowerCase())
     );
   }
 }

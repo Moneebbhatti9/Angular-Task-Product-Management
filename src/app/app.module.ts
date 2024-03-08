@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryModalComponent } from './modal/category-modal/category-modal.component';
 import { VendorModalComponent } from './modal/vendor-modal/vendor-modal.component';
 import { ProductModalComponent } from './modal/product-modal/product-modal.component';
+import { MainService } from './services/main.service';
 
 @NgModule({
   declarations: [
